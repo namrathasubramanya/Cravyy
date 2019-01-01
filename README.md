@@ -1,3 +1,3 @@
 # Cravyy
 
-![Image 1](IMG_6343.PNG = 250x250)
+![Image 1](IMG_6343.PNG =100x20)
