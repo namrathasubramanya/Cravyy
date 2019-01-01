@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+struct Collections: Decodable {
+    let collections: [Collection]!
+}
+
+struct Collection: Decodable {
+    let collection: CollectionData!
+}
+
+struct CollectionData: Decodable {
+    let collection_id: Int!
+    let res_count: Int!
+    let image_url: String!
+    let url: String!
+    let title: String!
+    let description: String!
+    let share_url: String!
+}

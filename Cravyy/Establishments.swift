@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+struct Establishments: Decodable {
+    let establishments: [Establishment]!
+}
+
+struct Establishment: Decodable {
+    let establishment: EstablishmentData!
+}
+
+struct EstablishmentData: Decodable {
+    let id: Int!
+    let name: String!
+}

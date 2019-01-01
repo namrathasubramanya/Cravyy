@@ -14,7 +14,7 @@ import MaterialComponents.MaterialTextFields
 
 
 
-class HomeScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CategoriesScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var passedCityIdValue: Int!
     var valueToPass: Int!
     var cat = [Categories]()
@@ -24,10 +24,10 @@ class HomeScreen: UIViewController, UICollectionViewDataSource, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.title = "Categories"
         fetchCategories()
         collectionView.dataSource = self
         collectionView.delegate = self
-        print(passedCityIdValue!)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -47,7 +47,6 @@ class HomeScreen: UIViewController, UICollectionViewDataSource, UICollectionView
                             do {
                                 let jsonDecoder = JSONDecoder()
                                 let categoryNames = try jsonDecoder.decode(CategoryArray.self, from: data!)
-                                print(categoryNames.categories)
                                 self.cat = categoryNames.categories
                                 DispatchQueue.main.async(execute: {
                                     self.collectionView.reloadData()
@@ -71,7 +70,6 @@ class HomeScreen: UIViewController, UICollectionViewDataSource, UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell",
                                                       for: indexPath) as! CollectionCell
         cell.categoryLabel.text = cat[indexPath.item].categories.name!
-        print(cat[indexPath.item].categories.name!)
         cell.backgroundColor = UIColor(red: 0, green: 0.67, blue: 0.55, alpha: 1)
         cell.tintColor = .white
         cell.cornerRadius = 8
@@ -83,10 +81,10 @@ class HomeScreen: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("You selected category id #\(String(describing: cat[indexPath.item].categories.id))!")
         valueToPass = cat[indexPath.item].categories.id
         let viewController = storyboard?.instantiateViewController(withIdentifier: "RestaurantList") as? RestaurantList
         viewController?.passedCategoryIdValue = valueToPass
+        viewController?.option = "Category"
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
 }

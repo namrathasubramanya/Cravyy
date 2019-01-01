@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Menu.plist
-   Cravyy
-
-   Created by Namratha Subramanya on 12/19/18.
-   Copyright (c) 2018 Namratha Subramanya. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>Dish_1</key>
+	<array>
+		<string>Garlic Fries</string>
+		<string>6.95</string>
+	</array>
+	<key>Dish_2</key>
+	<array>
+		<string>Chili &amp; Jalepeno Hummus </string>
+		<string>8.5</string>
+	</array>
+	<key>Dish_3</key>
+	<array>
+		<string>Spinach Artichoke Dip</string>
+		<string>8.95</string>
+	</array>
+	<key>Dish_4</key>
+	<array>
+		<string>Calzone </string>
+		<string>7.50</string>
+	</array>
+	<key>Dish_5</key>
+	<array>
+		<string>Salad Special </string>
+		<string>7</string>
+	</array>
+	<key>Dish_6</key>
+	<array>
+		<string>Chef Special Lasagne</string>
+		<string>20</string>
+	</array>
+	<key>Dish_7</key>
+	<array>
+		<string>Whitestone Mushroom</string>
+		<string>18.50 </string>
+	</array>
+	<key>Dish_8</key>
+	<array>
+		<string>Tomato Garlic Basil </string>
+		<string>16.75</string>
+	</array>
+	<key>Dish_9</key>
+	<array>
+		<string>Fried Calamari </string>
+		<string>5.75</string>
+	</array>
+	<key>Dish_10</key>
+	<array>
+		<string>California Egg Rolls</string>
+		<string>4.25</string>
+	</array>
+</dict>
 </plist>
